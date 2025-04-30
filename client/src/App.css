@@ -1,0 +1,147 @@
+/* App.css */
+.playground-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.editor-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.files {
+  width: 250px;
+  background-color: #252526;
+  overflow-y: auto;
+}
+
+.editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+}
+
+.tab-bar {
+  display: flex;
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #3c3c3c;
+  overflow-x: auto;
+}
+
+.tab {
+  padding: 5px 15px;
+  color: #858585;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-right: 1px solid #3c3c3c;
+  background-color: #2d2d2d;
+}
+
+.tab.active {
+  color: #d4d4d4;
+  background-color: #1e1e1e;
+}
+
+.tab:hover {
+  background-color: #37373d;
+}
+
+.close-tab {
+  font-size: 14px;
+  padding: 2px 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-tab:hover {
+  background-color: #ff4444;
+  color: #fff;
+}
+
+.splitter {
+  height: 5px;
+  background-color: #3c3c3c;
+  cursor: ns-resize;
+  position: relative;
+}
+
+.splitter:hover {
+  background-color: #4a4a4a;
+}
+
+.splitter::before {
+  content: "↕";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #858585;
+  font-size: 12px;
+  display: none;
+}
+
+.splitter:hover::before {
+  display: block;
+}
+
+.terminal-container {
+  background-color: #1e1e1e;
+  overflow: hidden;
+}
+
+.terminal-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-header {
+  padding: 5px 10px;
+  background-color: #252526;
+  border-bottom: 1px solid #3c3c3c;
+  color: #d4d4d4;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+#terminal {
+  flex: 1;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.status-bar {
+  background: #1e1e1e;
+  border-top: 1px solid #3c3c3c;
+  padding: 6px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #858585;
+  font-size: 0.85rem;
+}
+
+.status-left {
+  display: flex;
+  gap: 20px;
+}
+
+.format-button {
+  background: #3c3c3c;
+  border: 1px solid #5c5c5c;
+  color: #d4d4d4;
+  padding: 4px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.format-button:hover {
+  background: #4c4c4c;
+}
